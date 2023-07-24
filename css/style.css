@@ -104,10 +104,13 @@ body {
   text-transform: uppercase;
   margin: 15px 0;
 }
+.page__title  ul li{
+  margin-bottom: 1em;
+}
 
 .prices__list {
   margin: 20px;
-  max-width: 360px;
+  max-width: 400px;
 }
 
 @media (min-width: 500px) {
@@ -131,6 +134,11 @@ body {
 }
 
 .prices__item-desc {
+  display: inline-block;
+  width: 120px;
+}
+
+.prices__item-volume {
   display: inline-block;
   width: 120px;
 }

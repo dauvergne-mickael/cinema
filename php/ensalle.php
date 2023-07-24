@@ -3,26 +3,31 @@
 ?>
 <?php
     $films = ["Oppeinheimer", "Je suis une légende", "Interstellar", "Mission Impossible", "Indiana Jones"];
+    $rooms = ["Athéna", "Dyonisos","Hadès", "Zeus" ];
 ?>
+
 <h2 class="page__title">Les films</h2>
-<ul>
-<?php
-    // for résume en 3 étapes ce qu'on fait dans un while
-    // for (initialisation; condition de sortie; incrémentation a chaque tour de boucle)
-
-    // for ($index = 0; $index < 5; $index++) {
-    //     echo '<li>'.$films[$index].'</li>';
-    // }
-
-    // OU ALORS FAIR COMME CA
-
-for ($index = 0; $index < 5; $index++) {
+<ul>    
+    <?php
+    for ($index = 0; $index < 5; $index++) {
     ?>
-<li><?=$films[$index]?></li>
-<?php } ?>
-
-
+    <li><?=$films[$index]?></li>
+    <?php } ?>
 </ul>
+
+
+<h2 class="page__title">Salles</h2>
+<ul>
+   <?php
+    for ($i=0; $i <4 ; $i++) { 
+   ?>
+   <li><?= $rooms[$i]?></li>      
+    <?php } ?> 
+</ul>
+
+
+
+
 <?php 
     include '../templates/footer.php';
 ?>
