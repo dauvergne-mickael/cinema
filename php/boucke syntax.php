@@ -1,5 +1,1 @@
-<?php
-    $test = "ok";
-
-    echo $test;
-?>
+<h2> phrase test</>
