@@ -20,14 +20,14 @@
 <ul>
    <?php
     for ($i=0; $i <4 ; $i++) { 
-   ?>
-   <li><?= $rooms[$i]?></li>      
-    <?php } ?> 
+   
+    echo " <li>$rooms[$i]</li>";    
+    } 
+    ?> 
 </ul>
-
-
 
 
 <?php 
     include '../templates/footer.php';
 ?>
+

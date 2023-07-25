@@ -131,51 +131,43 @@ include "../templates/header.php";
 
 <section id="extra">
   <h2 class="page__title">Consommation</h2>
+
   <div class="prices__list">
     <h3 class="prices__list-title">
       <span class="prices__item-desc">produit</span> <span class="prices__item-volume">Volume</span> <span class="prices__item-value">Tarif unitaire</span>
     </h3>
+
     <?php $extras = [
-      ['Popcorn', 'L', 2.9],
-      ['Popcorn','XL', 4],
-      ['Chips','50g', 2.5],
-      [
-        'M&M\'s',
-        '100g',
-        4
-      ],
-      [
-        'Soda',
-        '33cl',
-        3.2
-      ],
-      [
-        'Evian',
-        '33cl',
-        3
-      ]
-    ];  
-    ?>
+        ['Popcorn', 'L', 2.9],
+        ['Popcorn','XL', 4],
+        ['Chips','50g', 2.5],
+        ['M&M\'s', '100g',4],
+        ['Soda', '33cl', 3.2],
+        ['Evian', '33cl', 3 ]
+      ];    
+    ?>  
+        
+    <ul class="conso">
 
-   <ul class="conso">
-    <?php
-
-    foreach ($extras as $item) {
-      echo "<li>". $item[0]." ". $item[1] ."  ". $item[2]. " €" .PHP_EOL . "</li>";
-    }
+      <?php
+      foreach ($extras as $item) {
+        echo '<li class ="prices__item">' . $item[0] . $item[1] . $item[2] . "€" . "\n" . '</li>';
+      }
       ?>
+
+      <?php
+        for ($i=0; $i < 6; $i++) { 
+          echo '<li class ="prices__item">'. '<span class="prices__item-desc">' . $extras[$i][0] . '</span>' 
+                     . '<span class="prices__item-volume">'. $extras[$i][1] . '</span>' 
+                     . '<span class="prices__item-value">' . $extras[$i][2] . '</span>'
+                .'</li>';
+        }
+      ?>
+
     </ul>
   
-    
+  </div>    
    
-    
-
-
-
-  </div>
-
-
-
 </section>
 <?php
 // Ci dessous j'inclus le fichier footer.php qui est dans le dossier templates.
